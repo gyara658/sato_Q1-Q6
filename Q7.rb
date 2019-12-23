@@ -1,7 +1,3 @@
-i ={}
+i =[]
 
-if i == []
-  puts "true"
-else
-  puts "false"
-end
+p i.instance_of?(Array)
