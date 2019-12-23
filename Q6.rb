@@ -1,7 +1,7 @@
 #number = [1, 5, 8, 10]
 number = []
 
-if number.count() == 0
+if number.empty?
   puts "true"
 else
   puts "false"
