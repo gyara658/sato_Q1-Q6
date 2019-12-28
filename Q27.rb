@@ -3,14 +3,14 @@
 #インスタンスを作成してください管理者権限の有無はtrueかfalseで表してください
 
 #ユーザークラスを定義　→　名前、年齢、性別、管理者権限
-class user
-  attr_accessor :name , :age , :sex , :admin
-  def  :name
-    @name
-    @age
-    @sex
-    @admin
+class User
+  attr_accessor :name,:age,:sex,:adomin
+  def initialize(name,age,sex,adomin)
+    @name = name
+    @age = age
+    @sex = sex
+    @adomin = adomin
   end
 end
 
-kozin = user.new
+kozin = User.new
