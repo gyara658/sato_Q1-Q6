@@ -4,13 +4,27 @@
 
 #ユーザークラスを定義　→　名前、年齢、性別、管理者権限
 class User
-  attr_accessor :name,:age,:sex,:adomin
-  def initialize(name,age,sex,adomin)
-    @name = name
-    @age = age
-    @sex = sex
-    @adomin = adomin
+  def initialize(params)
+    @name = params[:name]
+    @age = params[:age]
+    @sex = params[:sex]
+    @admin = params[:admin]
   end
 end
 
-kozin = User.new
+kozin = User.new(name: "神里", age: 32, sex: "男", admin: true)
+p kozin
+
+
+#class User
+  #attr_accessor :name,:age,:sex,:adomin
+  #def initialize(name,age,sex,adomin)
+    #@name = name
+    #@age = age
+    #@sex = sex
+    #@adomin = adomin
+  #end
+#end
+
+#kozin = User.new("神里", 32, "男",  true)
+#p kozin
