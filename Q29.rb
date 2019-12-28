@@ -1,6 +1,6 @@
 class User
-  def initialize(params)
-    @name = params[:name]
+  def initialize(name:)
+     @name = name
   end
 
   def name
