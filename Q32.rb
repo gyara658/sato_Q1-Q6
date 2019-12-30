@@ -21,18 +21,18 @@ class Zoo
   def check_entry_fee(user)
     price = case user.age
     when 0..5
-      50
+      @baby
     when 6..12
-       120
+       @child
     when 13..64
-       640
+       @adult
     when 65..120
-      1200
+      @senior
     else
       return puts "無効な値です"
     end
 
-    puts "#{user.name}は#{user.age}才なので#{price}円です"
+    puts "#{@name}では、#{user.name}は#{user.age}才なので#{price}円です"
 
     #when  0..5 then
       #puts "#{user.name}は#{user.age}才なので#{price}円です"
@@ -54,8 +54,8 @@ user3 = User.new(name:"はいさい",age:3)
 user4 = User.new(name:"ヤンくる",age:11)
 user5 = User.new(name:"シーサー",age:145)
 
-zoo = Zoo.new(name:"")
-#zoo = Zoo.new(name:"上野動物園",baby:50,child:120,adult:640,senior:1200)
+#zoo = Zoo.new(name:"")
+zoo = Zoo.new(name:"上野動物園",baby:50,child:120,adult:640,senior:1200)
 zoo.check_entry_fee(user1)
 zoo.check_entry_fee(user2)
 zoo.check_entry_fee(user3)
