@@ -4,12 +4,10 @@ class User
     @age = params[:age]
   end
 
-  def introduce
-    puts
-  end
 
   def introduce
-     puts @age > 15? "こんにちは、#{@name}と申します宜しくお願いいたします":"はいさいまいど〜、#{@name}です！！！"
+     puts @age > 15? "こんにちは、#{@name}と申します宜しくお願いいたします":
+     "はいさいまいど〜、#{@name}です！！！"
 
   end
 end
