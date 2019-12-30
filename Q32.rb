@@ -21,31 +21,30 @@ class Zoo
   def check_entry_fee(user)
     price = case user.age
     when 0..5
-      price = 50
+      50
     when 6..12
-      price = 120
+       120
     when 13..64
-      price = 640
+       640
     when 65..120
-      price = 1200
+      1200
     else
-      return
-      #puts "無効な値です"
+      return puts "無効な値です"
     end
 
+    puts "#{user.name}は#{user.age}才なので#{price}円です"
 
-    case user.age
-    when  0..5 then
-      puts "#{user.name}は#{user.age}才なので#{price}円です"
-    when 6..12 then
-      puts "#{user.name}は#{user.age}才なので#{price}円です"
-    when 13..64 then
-      puts "#{user.name}は#{user.age}才なので#{price}円です"
-    when 65..120 then
-      puts "#{user.name}は#{user.age}才なので#{price}円です"
+    #when  0..5 then
+      #puts "#{user.name}は#{user.age}才なので#{price}円です"
+    #when 6..12 then
+      #puts "#{user.name}は#{user.age}才なので#{price}円です"
+    #when 13..64 then
+      #puts "#{user.name}は#{user.age}才なので#{price}円です"
+    #when 65..120 then
+      #puts "#{user.name}は#{user.age}才なので#{price}円です"
     #else
       #puts "無効な値です。"
-    end
+    #end
   end
 end
 
